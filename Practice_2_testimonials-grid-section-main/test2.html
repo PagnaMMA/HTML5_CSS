@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+    .grid-item {
+      background-color: lightblue;
+      border: 1px solid #ccc;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-item">Item 1</div>
+    <div class="grid-item">Item 2</div>
+    <div class="grid-item">Item 3</div>
+    <div class="grid-item">Item 4</div>
+    <div class="grid-item">Item 5</div>
+  </div>
+</body>
+</html>
+
+<div class="grid-container">
+  <div class="item1">Text in Grid 1</div>
+  <div class="item2">Text in Grid 2</div>
+  <div class="item3">Text in Grid 3</div>
+</div>
+
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: 100px 100px; /* 2 equal rows */
+    gap: 10px; /* Space between items */
+  }
+
+  /* Position items using grid lines */
+  .item1 {
+    grid-column: 1 / 2; /* Start at column line 1 and end before line 2 */
+    grid-row: 1 / 2;    /* Start at row line 1 and end before line 2 */
+  }
+
+  .item2 {
+    grid-column: 2 / 4; /* Span across column lines 2 and 3 */
+    grid-row: 1 / 2;    /* Still in the first row */
+  }
+
+  .item3 {
+    grid-column: 1 / 4; /* Span across all three columns */
+    grid-row: 2 / 3;    /* Place in the second row */
+  }
+</style>
